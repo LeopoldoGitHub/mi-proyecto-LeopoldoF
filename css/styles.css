@@ -32,6 +32,7 @@ main {
     margin: 0 auto;
 
 }
+
 body{
 /*configuración general SC*/
 font-family: 'Lato', sans-serif;
@@ -43,7 +44,7 @@ min-height: 100vh;
 width: 100%;
 max-width: 1200px;
 }
-/*-wrapper*/
+
 .contenedor-header{
 width: 100vw;
 
@@ -76,7 +77,7 @@ header {
     color: #af599e;
 }
 .hr{
-    height: 20px;
+    height: 5px;
     width: 100%;
     background-image: radial-gradient(
         farthest-side at 50% -50%,
@@ -89,8 +90,7 @@ ul li{
     justify-content: space-between;
     margin-inline: 1rem;
 }
-.logo{
-}
+
 .img-logo{
     margin-top: -25px;
     width: 50px;
@@ -98,6 +98,7 @@ ul li{
     border:2px solid #c5d4df;
 
 }
+
 span{
     color: #7298ac;
 }
@@ -123,6 +124,8 @@ p{
     padding-bottom:20px;
     margin-left: 2rem;
     margin-right: 2rem;
+    text-align: center;
+    text-justify: distribute;
 }
 
 .tituloPrincipal{
@@ -173,7 +176,7 @@ p{
     margin-bottom: 2rem;
 
 }
-    
+
 footer{
       background-color: #af599e;/*color fondo sección SC*/
       color:  #fbfbfb;/*color texto SC*/
@@ -184,9 +187,9 @@ footer{
       display: flex;
       align-items: center;
       justify-content: center;
-    }
+}
 
-    @media (max-width:700px) {
+@media (max-width:700px) {
         main{
             display: flex;
             flex-direction: column;
@@ -201,30 +204,56 @@ footer{
 
         }
         .img-foto{
+            width: 400px;
+            max-width: 100%;
+            height: 400px;
             border-radius: 100%;
             padding: 2rem 2rem;
             object-fit: cover;
-            min-height: 100vw;
         }
+}
+
+@media (max-width:300px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
+    }
+    body{
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
 
     }
-
-    @media (max-width:900px) {
-        main{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 100%;
-            min-height: 100vh;
-        }
-        body{
-            width: 100%;
-            max-width: 100%;
-            min-height: 100vh;
-
-        }
-
+    .img-foto{
+        width: 200px;
+        max-width: 100%;
+        height: 200px;
+        border-radius: 100%;
+        padding: 2rem 2rem;
+        object-fit: cover;
     }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-lista{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .hr{
+        display: none;
+    }
+    header{
+        height: 90px;
+    }
+
+}
+
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
 *    "estilos generales". Una buena idea sería comenzar por el <body> ;)
